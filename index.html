@@ -33,12 +33,8 @@ button,input,textarea{font:inherit}
 
   <header style="position:sticky;top:0;z-index:20;background:rgba(251,250,246,.94);backdrop-filter:blur(6px);border-bottom:1px solid #ddd5c7">
     <div style="width:min(1280px,calc(100% - 56px));margin:0 auto;height:84px;display:flex;align-items:center;gap:32px">
-      <a href="#top" style="display:flex;align-items:center;gap:14px;flex:0 0 auto;color:#20313a">
-        <span style="display:block;width:2px;height:38px;background:#8a7350"></span>
-        <span style="display:flex;flex-direction:column;gap:3px">
-          <b style="font-family:'Merriweather',Georgia,serif;font-size:19px;font-weight:700;letter-spacing:.22em;line-height:1">АРГУМЕНТ</b>
-          <span style="font-size:13px;letter-spacing:.02em;color:#5f7079;line-height:1.35">Российская консалтинговая группа</span>
-        </span>
+      <a href="#top" class="home-brand" aria-label="АРГУМЕНТ — на главную">
+        <img src="./img/argument-logo.png" alt="АРГУМЕНТ. Российская консалтинговая группа">
       </a>
       <sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}">
         <nav aria-label="Основная навигация" style="display:flex;flex-wrap:nowrap;gap:clamp(14px,1.8vw,26px);margin-left:auto;font-size:16px;color:#314650;min-width:0">
@@ -72,24 +68,27 @@ button,input,textarea{font:inherit}
 
     <section id="hero" style="background:#f4f1ea;border-bottom:1px solid #ddd5c7">
       <div class="home-hero-grid" style="width:min(1280px,calc(100% - 56px));margin:0 auto;padding:84px 0 76px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:56px;align-items:center">
-        <div style="display:flex;flex-direction:column;gap:26px">
-          <h1 style="font-family:'Merriweather',Georgia,serif;font-weight:400;font-size:clamp(34px,4.2vw,58px);line-height:1.2;letter-spacing:-.01em;max-width:16em;text-wrap:pretty">Комплексное профессиональное обеспечение бизнеса</h1>
-          <p style="font-size:19px;line-height:1.65;color:#314650;max-width:30em;text-wrap:pretty">Единая отлаженная система сопровождения: право, налоги, учёт и отчётность, кадры, документооборот и деловая инфраструктура — в одном контуре ответственности. Вы занимаетесь продуктом и клиентами, операционную рутину и профессиональные риски берём на себя мы.</p>
-          <div style="display:flex;flex-wrap:wrap;align-items:center;gap:24px">
+        <div class="home-hero-copy" style="display:flex;flex-direction:column;gap:26px">
+          <h1 style="font-family:'Merriweather',Georgia,serif;font-weight:400;font-size:clamp(34px,4.2vw,58px);line-height:1.2;letter-spacing:-.01em;max-width:16em;text-wrap:pretty">Комплексное сопровождение бизнеса</h1>
+          <div class="home-hero-intro">
+            <p>Право, налоги, учёт и отчётность, кадры, документооборот и деловая инфраструктура — в одном контуре ответственности.</p>
+            <p>Вы занимаетесь продуктом и клиентами, операционную рутину и профессиональные риски берём на себя мы.</p>
+          </div>
+          <div class="home-hero-actions" style="display:flex;flex-wrap:wrap;align-items:center;gap:24px">
             <a href="#contacts" style="color: #ffffff; padding: 16px 28px; font-size: 16px; border: 1px solid #20313a; background-color: #233b47" style-hover="background:#314650;color:#ffffff">Обсудить задачу</a>
             <a href="#services" style="font-size:16px;color:#78643f;border-bottom:1px solid #ddd5c7;padding-bottom:3px" style-hover="color:#20313a;border-bottom:1px solid #96876b">Смотреть услуги →</a>
           </div>
           <ul style="list-style:none;margin:6px 0 0;padding:18px 0 0;border-top:1px solid #ddd5c7;display:flex;flex-wrap:wrap;gap:34px;font-size:13px;font-weight:600;color:#5f7079">
-            <li>Устойчивость</li>
-            <li>Надёжность</li>
-            <li>Поддержка</li>
+            <li>Аутсорсинг</li>
+            <li>Консалтинг</li>
+            <li>Защита</li>
           </ul>
         </div>
-        <figure style="margin:0;display:flex;flex-direction:column;gap:14px">
+        <figure class="home-hero-visual" style="margin:0;display:flex;flex-direction:column;gap:14px">
           <div style="position:relative;width:100%;aspect-ratio:4/5;border:1px solid #ddd5c7;background:#fbfaf6;padding:10px">
-            <img class="home-hero-image" style="display:block;width:100%;height:100%;object-fit:cover" src="./img/hero.webp" alt="Архитектурная колоннада">
+            <img class="home-hero-image" style="display:block;width:100%;height:100%;object-fit:cover" src="./img/home-office.jpg" alt="Рабочее пространство команды АРГУМЕНТ">
           </div>
-          <figcaption style="font-size:13px;color:#5f7079;font-weight:600">Работаем с 2004 года · Россия</figcaption>
+          <figcaption class="home-hero-year"><strong>2004</strong><span>Работаем с бизнесом более 20 лет<br>по всей России</span></figcaption>
         </figure>
       </div>
     </section>
@@ -99,40 +98,31 @@ button,input,textarea{font:inherit}
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:48px;align-items:end">
           <div style="display:flex;flex-direction:column;gap:18px">
             <span style="display:flex;align-items:center;gap:12px;font-size:13px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:#78643f"><span style="width:30px;height:1px;background:#96876b"></span>Наше предложение</span>
-            <h2 style="font-family:'Merriweather',Georgia,serif;font-weight:400;font-size:clamp(28px,3.2vw,44px);line-height:1.2;letter-spacing:-.01em">Комплексность как характеристика продукта</h2>
+            <h2 style="font-family:'Merriweather',Georgia,serif;font-weight:400;font-size:clamp(28px,3.2vw,44px);line-height:1.2;letter-spacing:-.01em">Комплексный продукт: всё необходимое в одном решении</h2>
           </div>
-          <p style="font-size:19px;line-height:1.65;color:#314650;max-width:30em;text-wrap:pretty">Комплексность — не единственное наше преимущество, а основная характеристика бизнес-процесса, который мы предлагаем. Она держится на двух опорах.</p>
+          <p style="font-size:19px;line-height:1.65;color:#314650;max-width:30em;text-wrap:pretty">Наш бизнес-процесс выстроен по принципу комплексности: это его ядро, подкреплённое двумя фундаментальными элементами.</p>
         </div>
 
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:24px">
-          <article style="background:#ffffff;border:1px solid #ddd5c7;padding:36px;display:flex;flex-direction:column;gap:18px">
-            <span style="font-family:'Merriweather',Georgia,serif;font-size:16px;color:#78643f">Опора 01</span>
+          <article class="home-pillar" style="background:#ffffff;border:1px solid #ddd5c7;padding:36px;display:flex;flex-direction:column;gap:18px">
+            <span class="home-pillar-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><rect x="6" y="5" width="20" height="22" rx="1"/><path d="m10 12 2.5 2.5L17 10M10 20l2.5 2.5L17 18M20 12h3M20 20h3"/></svg></span>
             <h3 style="font-family:'Merriweather',Georgia,serif;font-weight:400;font-size:28px;line-height:1.35">Решаем задачи разных целевых аудиторий</h3>
             <p style="font-size:16px;line-height:1.65;color:#314650">Учитываем географию ведения деятельности, отрасль, размер компании и степень развития бизнеса — от первых шагов до устойчивой структуры с несколькими юрлицами.</p>
-            <ul style="list-style:none;margin:0;padding:20px 0 0;border-top:1px solid #ddd5c7;display:grid;gap:10px;font-size:16px;color:#314650">
-              <li>География: работаем с организациями по всей России</li>
-              <li>Отрасль: учитываем отраслевую специфику клиента</li>
-              <li>Масштаб: от начинающего бизнеса до групп компаний</li>
-            </ul>
           </article>
-          <article style="background:#ffffff;border:1px solid #ddd5c7;padding:36px;display:flex;flex-direction:column;gap:18px">
-            <span style="font-family:'Merriweather',Georgia,serif;font-size:16px;color:#78643f">Опора 02</span>
+          <article class="home-pillar" style="background:#ffffff;border:1px solid #ddd5c7;padding:36px;display:flex;flex-direction:column;gap:18px">
+            <span class="home-pillar-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M7 8h18v12H14l-5 4v-4H7z"/><path d="M11 12h10M11 16h7"/></svg></span>
             <h3 style="font-family:'Merriweather',Georgia,serif;font-weight:400;font-size:28px;line-height:1.35">Предлагаем разные форматы сопровождения</h3>
             <p style="font-size:16px;line-height:1.65;color:#314650">Широкий спектр профессиональных специализаций и свободный выбор формата: разовая консультация, проект, постоянный аутсорсинг или индивидуальное решение под задачу.</p>
-            <ul style="list-style:none;margin:0;padding:20px 0 0;border-top:1px solid #ddd5c7;display:grid;gap:10px;font-size:16px;color:#314650">
-              <li>6 видов услуг — от консультации до аутсорсинга</li>
-              <li>7 предметных областей в одной команде</li>
-              <li>Объём и глубина сопровождения — по договорённости</li>
-            </ul>
           </article>
         </div>
 
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:24px">
-          <article style="color: #ffffff; border: 1px solid #20313a; padding: 32px; display: flex; flex-direction: column; gap: 10px; min-height: 200px; background-color: #233b47">
-            <span style="font-family:'Merriweather',Georgia,serif;font-size:56px;line-height:1;color:#ffffff">2004</span>
-            <span style="font-size:13px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:#c9a86a">На рынке с 2004 года</span>
-            <p style="font-size:16px;line-height:1.65;color:#d9e0e2;margin-top:auto">Более 20 лет практики в профессиональном обеспечении бизнеса.</p>
-          </article>
+        <div class="home-proof-strip" aria-label="Комплексность в цифрах">
+          <p><strong>6</strong><span>видов услуг — от консультации до аутсорсинга</span></p>
+          <p><strong>7</strong><span>предметных областей в одной команде</span></p>
+          <p><strong>∞</strong><span>объём и глубина сопровождения — по договорённости</span></p>
+        </div>
+
+        <div class="home-outcomes-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:24px">
           <article style="background:#ffffff;border:1px solid #ddd5c7;padding:32px;display:flex;flex-direction:column;gap:12px;min-height:200px">
             <h3 style="font-family:'Merriweather',Georgia,serif;font-weight:400;font-size:22px;line-height:1.35">Один контур ответственности</h3>
             <p style="font-size:16px;line-height:1.65;color:#314650">Задачи разных специализаций не рассыпаются между подрядчиками: они ведутся согласованно, одной командой.</p>
@@ -156,39 +146,33 @@ button,input,textarea{font:inherit}
             <span style="display:flex;align-items:center;gap:12px;font-size:13px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:#c9a86a"><span style="width:30px;height:1px;background:#c9a86a"></span>Виды услуг</span>
             <h2 style="font-family:'Merriweather',Georgia,serif;font-weight:400;font-size:clamp(28px,3.2vw,44px);line-height:1.2;color:#fbfaf6">Услуги</h2>
           </div>
-          <p style="font-size:19px;line-height:1.65;color:#d9e0e2;max-width:30em;text-wrap:pretty">Мы понимаем, что у каждой ситуации есть свой контекст. Наша модель позволяет клиентам выбирать именно те виды услуг, которые актуальны для них здесь и сейчас.</p>
+          <p style="font-size:19px;line-height:1.65;color:#d9e0e2;max-width:30em;text-wrap:pretty">Гибко подходим к задачам: предлагаем услуги, релевантные вашей ситуации.</p>
         </div>
         <div class="home-service-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:1px;background:#314650;border:1px solid #314650">
-          <a href="./consultations.html" style="background:#20313a;padding:26px 28px;display:flex;align-items:center;gap:20px;color:#fbfaf6" style-hover="background:#2a3f4a;color:#fbfaf6">
+          <article class="home-service-item">
             <span style="font-family: 'Merriweather',Georgia,serif; font-size: 32px; color: #c9a86a; flex: 0 0 auto; min-width: 30px; text-align: center; width: 30px">•</span>
             <h3 style="font-family:'Merriweather',Georgia,serif;font-weight:400;font-size:22px;line-height:1.35">Консультации экспертов</h3>
-            <span style="margin-left:auto;color:#c9a86a">→</span>
-          </a>
-          <a href="./transactions.html" style="background:#20313a;padding:26px 28px;display:flex;align-items:center;gap:20px;color:#fbfaf6" style-hover="background:#2a3f4a;color:#fbfaf6">
+          </article>
+          <article class="home-service-item">
             <span style="font-family: 'Merriweather',Georgia,serif; font-size: 16px; color: #c9a86a; flex: 0 0 auto; min-width: 30px; text-align: center"><span style="font-size: 32px">•</span></span>
             <h3 style="font-family:'Merriweather',Georgia,serif;font-weight:400;font-size:22px;line-height:1.35">Сопровождение сделок, проектов, процедур</h3>
-            <span style="margin-left:auto;color:#c9a86a">→</span>
-          </a>
-          <a href="./outsourcing.html" style="background:#20313a;padding:26px 28px;display:flex;align-items:center;gap:20px;color:#fbfaf6" style-hover="background:#2a3f4a;color:#fbfaf6">
+          </article>
+          <article class="home-service-item">
             <span style="font-family: 'Merriweather',Georgia,serif; font-size: 16px; color: #c9a86a; flex: 0 0 auto; min-width: 30px; text-align: center"><span style="font-size: 32px">•</span></span>
             <h3 style="font-family:'Merriweather',Georgia,serif;font-weight:400;font-size:22px;line-height:1.35">Аутсорсинг</h3>
-            <span style="margin-left:auto;color:#c9a86a">→</span>
-          </a>
-          <a href="./custom-solutions.html" style="background:#20313a;padding:26px 28px;display:flex;align-items:center;gap:20px;color:#fbfaf6" style-hover="background:#2a3f4a;color:#fbfaf6">
+          </article>
+          <article class="home-service-item">
             <span style="font-family: 'Merriweather',Georgia,serif; font-size: 16px; color: #c9a86a; flex: 0 0 auto; min-width: 30px; text-align: center"><span style="font-size: 32px">•</span></span>
             <h3 style="font-family:'Merriweather',Georgia,serif;font-weight:400;font-size:22px;line-height:1.35">Разработка индивидуальных решений</h3>
-            <span style="margin-left:auto;color:#c9a86a">→</span>
-          </a>
-          <a href="./internal-control.html" style="background:#20313a;padding:26px 28px;display:flex;align-items:center;gap:20px;color:#fbfaf6" style-hover="background:#2a3f4a;color:#fbfaf6">
+          </article>
+          <article class="home-service-item">
             <span style="font-family: 'Merriweather',Georgia,serif; font-size: 16px; color: #c9a86a; flex: 0 0 auto; min-width: 30px; text-align: center"><span style="font-size: 32px">•</span></span>
             <h3 style="font-family:'Merriweather',Georgia,serif;font-weight:400;font-size:22px;line-height:1.35">Внутренний контроль и аудит</h3>
-            <span style="margin-left:auto;color:#c9a86a">→</span>
-          </a>
-          <a href="./professional-infrastructure.html" style="background:#20313a;padding:26px 28px;display:flex;align-items:center;gap:20px;color:#fbfaf6" style-hover="background:#2a3f4a;color:#fbfaf6">
+          </article>
+          <article class="home-service-item">
             <span style="font-family: 'Merriweather',Georgia,serif; font-size: 16px; color: #c9a86a; flex: 0 0 auto; min-width: 30px; text-align: center"><span style="font-size: 32px">•</span></span>
             <h3 style="font-family:'Merriweather',Georgia,serif;font-weight:400;font-size:22px;line-height:1.35">Настройка инфраструктуры</h3>
-            <span style="margin-left:auto;color:#c9a86a">→</span>
-          </a>
+          </article>
         </div>
         <div style="background:#ffffff;border:1px solid #ddd5c7;padding:28px 32px;display:flex;flex-wrap:wrap;align-items:center;gap:24px">
           <div style="display:flex;flex-direction:column;gap:6px;min-width:260px;flex:1 1 auto">
@@ -255,51 +239,45 @@ button,input,textarea{font:inherit}
       <div style="width:min(1280px,calc(100% - 56px));margin:0 auto;display:flex;flex-direction:column;gap:40px">
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:48px;align-items:end">
           <div style="display:flex;flex-direction:column;gap:18px">
-            <span style="display:flex;align-items:center;gap:12px;font-size:13px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:#78643f"><span style="width:30px;height:1px;background:#96876b"></span>Целевые аудитории</span>
-            <h2 style="font-family:'Merriweather',Georgia,serif;font-weight:400;font-size:clamp(28px,3.2vw,44px);line-height:1.2">С кем мы работаем</h2>
+            <span style="display:flex;align-items:center;gap:12px;font-size:13px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:#78643f"><span style="width:30px;height:1px;background:#96876b"></span>Кому мы помогаем</span>
+            <h2 style="font-family:'Merriweather',Georgia,serif;font-weight:400;font-size:clamp(28px,3.2vw,44px);line-height:1.2">Наши клиенты</h2>
           </div>
-          <p style="font-size:19px;line-height:1.65;color:#314650;max-width:30em;text-wrap:pretty">Первая опора комплексности на практике: продукт собирается под потребности трёх категорий клиентов — с учётом географии, отрасли, размера и этапа развития бизнеса.</p>
+          <p style="font-size:19px;line-height:1.65;color:#314650;max-width:30em;text-wrap:pretty">Строим продукт под три типа клиентов: ориентируемся на регион, отрасль, масштаб и стадию бизнеса.</p>
         </div>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:24px;align-items:stretch">
           <article style="background:#ffffff;border:1px solid #ddd5c7;padding:32px;display:flex;flex-direction:column;gap:14px">
             <span style="width:52px;height:52px;flex:0 0 auto;display:flex;align-items:center;justify-content:center;background:#f4f1ea;border:1px solid #ddd5c7;color:#8a7350;margin-bottom:4px" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7.5" width="18" height="12" rx="1"></rect><path d="M9 7.5V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5v2"></path><path d="M3 12h18"></path><path d="M10.5 12h3"></path></svg></span>
-            <h3 style="font-family:'Merriweather',Georgia,serif;font-weight:400;font-size:22px;line-height:1.35">Топ-менеджеры стабильных компаний</h3>
-            <p style="font-size:16px;line-height:1.65;color:#314650">В ситуациях, когда нужно экспертное мнение или особое профессиональное решение.</p>
-            <button type="button" onClick="{{ pickTop }}" style="margin-top:auto;align-self:flex-start;background:none;border:none;border-bottom:1px solid #ddd5c7;padding:0 0 4px;color:#78643f;font-size:16px;cursor:pointer" style-hover="color:#20313a;border-bottom:1px solid #96876b">Обсудить задачу →</button>
+            <h3 style="font-family:'Merriweather',Georgia,serif;font-weight:400;font-size:22px;line-height:1.35">Владельцы и руководители существующего бизнеса</h3>
+            <p style="font-size:16px;line-height:1.65;color:#314650">Помогаем надёжно защищать интересы компании и минимизировать юридические риски на всех этапах работы.</p>
+            <button type="button" onClick="{{ pickOwner }}" style="margin-top:auto;align-self:flex-start;background:none;border:none;border-bottom:1px solid #ddd5c7;padding:0 0 4px;color:#78643f;font-size:16px;cursor:pointer" style-hover="color:#20313a;border-bottom:1px solid #96876b">Обсудить задачу →</button>
           </article>
           <article style="background:#ffffff;border:1px solid #ddd5c7;padding:32px;display:flex;flex-direction:column;gap:14px">
             <span style="width:52px;height:52px;flex:0 0 auto;display:flex;align-items:center;justify-content:center;background:#f4f1ea;border:1px solid #ddd5c7;color:#8a7350;margin-bottom:4px" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V6.5L12 4l8 2.5V20"></path><path d="M3 20h18"></path><path d="M9.5 20v-5h5v5"></path><path d="M8 9.5h2"></path><path d="M14 9.5h2"></path></svg></span>
-            <h3 style="font-family:'Merriweather',Georgia,serif;font-weight:400;font-size:22px;line-height:1.35">Владельцы и руководители существующего бизнеса</h3>
-            <p style="font-size:16px;line-height:1.65;color:#314650">Которые на практике убедились, что качественное профессиональное обеспечение — не роскошь, а необходимое условие выживания бизнеса.</p>
-            <button type="button" onClick="{{ pickOwner }}" style="margin-top:auto;align-self:flex-start;background:none;border:none;border-bottom:1px solid #ddd5c7;padding:0 0 4px;color:#78643f;font-size:16px;cursor:pointer" style-hover="color:#20313a;border-bottom:1px solid #96876b">Обсудить задачу →</button>
+            <h3 style="font-family:'Merriweather',Georgia,serif;font-weight:400;font-size:22px;line-height:1.35">Топ-менеджеры стабильных компаний</h3>
+            <p style="font-size:16px;line-height:1.65;color:#314650">Обеспечиваем правовую поддержку, которая помогает уверенно принимать стратегические решения и защищать интересы бизнеса.</p>
+            <button type="button" onClick="{{ pickTop }}" style="margin-top:auto;align-self:flex-start;background:none;border:none;border-bottom:1px solid #ddd5c7;padding:0 0 4px;color:#78643f;font-size:16px;cursor:pointer" style-hover="color:#20313a;border-bottom:1px solid #96876b">Обсудить задачу →</button>
           </article>
           <article style="background:#ffffff;border:1px solid #ddd5c7;padding:32px;display:flex;flex-direction:column;gap:14px">
             <span style="width:52px;height:52px;flex:0 0 auto;display:flex;align-items:center;justify-content:center;background:#f4f1ea;border:1px solid #ddd5c7;color:#8a7350;margin-bottom:4px" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21v-8"></path><path d="M12 13c0-3.3 2.4-6 6-6 0 3.3-2.7 6-6 6z"></path><path d="M12 15c-3.3 0-6-2.4-6-5.5 3.3 0 6 2.4 6 5.5z"></path><path d="M8 21h8"></path></svg></span>
             <h3 style="font-family:'Merriweather',Georgia,serif;font-weight:400;font-size:22px;line-height:1.35">Начинающие предприниматели</h3>
-            <p style="font-size:16px;line-height:1.65;color:#314650">Решившие создавать бизнес на профессиональной основе, без досадных ошибок и провалов.</p>
+            <p style="font-size:16px;line-height:1.65;color:#314650">Помогаем начинающим предпринимателям грамотно выстроить юридическую основу бизнеса и избежать типичных правовых ошибок на старте.</p>
             <button type="button" onClick="{{ pickStart }}" style="margin-top:auto;align-self:flex-start;background:none;border:none;border-bottom:1px solid #ddd5c7;padding:0 0 4px;color:#78643f;font-size:16px;cursor:pointer" style-hover="color:#20313a;border-bottom:1px solid #96876b">Обсудить задачу →</button>
           </article>
         </div>
-        <sc-if value="{{ showGeoStrip }}" hint-placeholder-val="{{ true }}">
-          <div style="border-top:1px solid #ddd5c7;padding-top:26px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:24px">
+          <div class="home-client-facts">
             <div style="display:flex;flex-direction:column;gap:6px">
               <span style="font-size:13px;color:#5f7079;font-weight:600">География</span>
-              <b style="font-family:'Merriweather',Georgia,serif;font-weight:400;font-size:19px">Вся Россия, без привязки к региону</b>
+              <b style="font-family:'Merriweather',Georgia,serif;font-weight:400;font-size:19px">Работаем по всей России</b>
             </div>
             <div style="display:flex;flex-direction:column;gap:6px">
-              <span style="font-size:13px;color:#5f7079;font-weight:600">Форматы</span>
-              <b style="font-family:'Merriweather',Georgia,serif;font-weight:400;font-size:19px">Консультация, проект, аутсорсинг</b>
+              <span style="font-size:13px;color:#5f7079;font-weight:600">Отрасль</span>
+              <b style="font-family:'Merriweather',Georgia,serif;font-weight:400;font-size:19px">Учитываем отраслевую специфику клиента</b>
             </div>
             <div style="display:flex;flex-direction:column;gap:6px">
-              <span style="font-size:13px;color:#5f7079;font-weight:600">Отрасли</span>
-              <b style="font-family:'Merriweather',Georgia,serif;font-weight:400;font-size:19px">С учётом отраслевой специфики</b>
-            </div>
-            <div style="display:flex;flex-direction:column;gap:6px">
-              <span style="font-size:13px;color:#5f7079;font-weight:600">Взаимодействие</span>
-              <b style="font-family:'Merriweather',Georgia,serif;font-weight:400;font-size:19px">Дистанционно и на площадке клиента</b>
+              <span style="font-size:13px;color:#5f7079;font-weight:600">Масштаб</span>
+              <b style="font-family:'Merriweather',Georgia,serif;font-weight:400;font-size:19px">От начинающего бизнеса до групп компаний</b>
             </div>
           </div>
-        </sc-if>
       </div>
     </section>
 
@@ -307,10 +285,13 @@ button,input,textarea{font:inherit}
       <div class="home-news-shell">
         <div class="home-news-heading">
           <div>
-            <h2 id="home-news-title">Новости и материалы</h2>
-            <p>Примеры публикаций о налоговых рисках, учёте и профессиональном сопровождении бизнеса.</p>
+            <h2 id="home-news-title">Бизнес-новости: что влияет на работу и развитие</h2>
+            <p>Быстро реагируем на любые изменения в законах, оцениваем риски для бизнеса и даём готовые рекомендации. Все материалы и комментарии подготовлены профессиональными экспертами.</p>
           </div>
-          <a href="./news.html" class="home-news-all">Все материалы <span aria-hidden="true">→</span></a>
+          <div class="home-news-actions">
+            <a href="./news.html" class="home-news-all">Все новости <span aria-hidden="true">→</span></a>
+            <a href="#contacts" class="home-news-consult">Получить консультацию</a>
+          </div>
         </div>
         <div class="home-news-list">
           <a class="home-news-row" href="./news-tax-safety.html">
@@ -329,6 +310,25 @@ button,input,textarea{font:inherit}
             <span class="home-news-arrow" aria-hidden="true">→</span>
           </a>
         </div>
+      </div>
+    </section>
+
+    <section id="cases" class="home-cases" aria-labelledby="home-cases-title">
+      <div class="home-cases-shell">
+        <div class="home-cases-intro">
+          <span class="home-section-kicker"><span aria-hidden="true"></span>Практика команды</span>
+          <h2 id="home-cases-title">Кейсы</h2>
+          <p>Готовим к публикации реальные задачи клиентов. Материалы появятся после согласования названий, решений и результатов.</p>
+        </div>
+        <article class="home-case-template" aria-label="Структура будущих кейсов">
+          <header><span>Шаблон публикации</span><b>Материал на согласовании</b></header>
+          <div class="home-case-fields">
+            <div><small>01</small><h3>Задача клиента</h3><p>Контекст бизнеса и исходная ситуация.</p></div>
+            <div><small>02</small><h3>Подход команды</h3><p>Экспертиза, этапы работы и принятое решение.</p></div>
+            <div><small>03</small><h3>Результат</h3><p>Подтверждённый эффект без раскрытия конфиденциальных данных.</p></div>
+          </div>
+          <a href="#contacts">Обсудить похожую задачу <span aria-hidden="true">→</span></a>
+        </article>
       </div>
     </section>
 
@@ -424,7 +424,7 @@ button,input,textarea{font:inherit}
   </footer>
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;showGeoStrip&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Секции&quot;}}">
+<script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
   state = { category: "", wide: true, menuOpen: false };
 
@@ -464,7 +464,6 @@ class Component extends DCLogic {
   renderVals() {
     return {
       category: this.state.category,
-      showGeoStrip: this.props.showGeoStrip ?? true,
       wide: this.state.wide,
       narrow: !this.state.wide,
       menuOpen: this.state.menuOpen && !this.state.wide,

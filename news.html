@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Новости и материалы — АРГУМЕНТ</title>
+  <title>Новости и материалы - АРГУМЕНТ</title>
   <meta name="description" content="Новости и материалы консалтинговой группы АРГУМЕНТ.">
   <link rel="stylesheet" href="./assets/service.css">
   <link rel="stylesheet" href="./assets/news.css">
@@ -13,19 +13,18 @@
 <body>
 <header class="site-header">
   <div class="shell header-inner">
-    <a class="brand" href="./index.html" aria-label="АРГУМЕНТ — на главную"><span class="brand-mark"></span><span><span class="brand-name">АРГУМЕНТ</span><span class="brand-note">Российская консалтинговая группа</span></span></a>
+    <a class="brand" href="./index.html" aria-label="АРГУМЕНТ - на главную"><span class="brand-mark"></span><span><span class="brand-name">АРГУМЕНТ</span><span class="brand-note">Российская консалтинговая группа</span></span></a>
     <nav class="main-nav" data-menu aria-label="Основная навигация"><a href="./index.html#services">Услуги</a><a href="./index.html#expertise">Предметные области</a><a href="./index.html#clients">Клиенты</a><a href="./news.html" aria-current="page">Новости</a><a href="mailto:office@argument-group.ru">Контакты</a></nav>
     <a class="button header-cta" href="mailto:office@argument-group.ru">Обсудить задачу</a>
     <button class="menu-button" type="button" data-menu-button aria-expanded="false" aria-label="Открыть меню">Меню</button>
   </div>
 </header>
 <main id="top">
-  <section class="editorial-hero"><div class="shell">
+  <section class="editorial-hero editorial-hero--news"><div class="shell">
     <nav class="breadcrumbs" aria-label="Хлебные крошки"><a href="./index.html">Главная</a><span>→</span><span>Новости и материалы</span></nav>
     <h1>Новости и материалы</h1>
     <p class="editorial-lead">Три примера публикаций о профессиональном сопровождении бизнеса. Они показывают, как будут выглядеть материалы раздела.</p>
   </div></section>
-  <div class="news-banner"><img src="./img/news.png" alt="Рабочий стол с документами и ручкой"></div>
   <section class="news-section"><div class="shell">
     <div class="news-intro"><h2>Материалы</h2><p>Выберите тему и откройте полный пример материала. Тексты подготовлены для демонстрации раздела.</p></div>
     <div class="news-filters" role="group" aria-label="Фильтр материалов">
@@ -33,20 +32,28 @@
       <button type="button" data-news-filter="product" aria-pressed="false">Продукты группы</button>
       <button type="button" data-news-filter="material" aria-pressed="false">Экспертные материалы</button>
     </div>
-    <div class="news-list"><a class="news-item" href="./news-tax-safety.html" data-news-kind="product">
-  <span class="news-item-meta">Продукты группы · Пример</span>
-  <span><h3>Служба налоговой безопасности</h3><p>Анализ и регулирование налоговых рисков, а также сопровождение мероприятий налогового контроля.</p></span>
-  <span class="news-arrow" aria-hidden="true">→</span>
-</a><a class="news-item" href="./news-ausn.html" data-news-kind="product">
-  <span class="news-item-meta">Продукты группы · Пример</span>
-  <span><h3>Сопровождение АУСН</h3><p>Комплексное сопровождение компаний на АУСН: бухгалтерия, налоги, кадры и оплата труда.</p></span>
-  <span class="news-arrow" aria-hidden="true">→</span>
-</a><a class="news-item" href="./news-business-support.html" data-news-kind="material">
-  <span class="news-item-meta">Экспертный материал · Пример</span>
-  <span><h3>Профессиональное сопровождение бизнеса</h3><p>Как объединить консультации, консалтинг и аутсорсинг в удобный формат взаимодействия с экспертами.</p></span>
-  <span class="news-arrow" aria-hidden="true">→</span>
-</a></div>
+    <div class="news-list">
+      <a class="news-item" href="./news-tax-safety.html" data-news-kind="product">
+        <span class="news-item-cover"><img src="./img/news-tax-safety-cover.png" alt="Документы и ручка на рабочем столе"></span>
+        <span class="news-item-copy"><span class="news-item-meta">Продукты группы · Пример</span><h3>Служба налоговой безопасности</h3><p>Анализ и регулирование налоговых рисков, а также сопровождение мероприятий налогового контроля.</p></span>
+        <span class="news-arrow" aria-hidden="true">→</span>
+      </a>
+      <a class="news-item" href="./news-ausn.html" data-news-kind="product">
+        <span class="news-item-cover"><img src="./img/news-ausn-cover.png" alt="Рабочее место с документами и калькулятором"></span>
+        <span class="news-item-copy"><span class="news-item-meta">Продукты группы · Пример</span><h3>Сопровождение АУСН</h3><p>Комплексное сопровождение компаний на АУСН: бухгалтерия, налоги, кадры и оплата труда.</p></span>
+        <span class="news-arrow" aria-hidden="true">→</span>
+      </a>
+      <a class="news-item" href="./news-business-support.html" data-news-kind="material">
+        <span class="news-item-cover"><img src="./img/news-business-support-cover.png" alt="Папки и ноутбук на рабочем столе"></span>
+        <span class="news-item-copy"><span class="news-item-meta">Экспертный материал · Пример</span><h3>Профессиональное сопровождение бизнеса</h3><p>Как объединить консультации, консалтинг и аутсорсинг в удобный формат взаимодействия с экспертами.</p></span>
+        <span class="news-arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
     <p class="news-count" data-news-count aria-live="polite">Показано материалов: 3</p>
+    <section class="news-brief" aria-labelledby="news-brief-title">
+      <div><span class="article-status">Нужен ориентир</span><h2 id="news-brief-title">Обсудите задачу в её рабочем контексте</h2></div>
+      <div><p>Материалы помогают сориентироваться в теме. Для разговора о конкретной ситуации достаточно кратко описать задачу, участников и ожидаемый результат.</p><a class="button" href="mailto:office@argument-group.ru">Обсудить задачу</a></div>
+    </section>
   </div></section>
 </main>
 <footer class="site-footer"><div class="shell footer-grid"><div class="footer-brand"><div class="brand"><span class="brand-mark"></span><span><span class="brand-name">АРГУМЕНТ</span><span class="brand-note">Российская консалтинговая группа</span></span></div><p>Правовое и профессиональное сопровождение бизнеса.</p></div><div class="footer-col"><h2>Разделы</h2><nav class="footer-nav"><a href="./index.html#services">Услуги</a><a href="./index.html#expertise">Предметные области</a><a href="./news.html">Новости</a></nav></div><div class="footer-col"><h2>Контакты</h2><nav class="footer-nav"><a href="mailto:office@argument-group.ru">office@argument-group.ru</a><span>Россия</span><span>Связь по предварительному запросу</span></nav></div></div><div class="shell footer-bottom"><span>© АРГУМЕНТ</span><span>Информация на сайте не является индивидуальной консультацией</span></div></footer>
